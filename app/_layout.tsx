@@ -1,5 +1,31 @@
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
+import React from "react";
 
-export default function RootLayout() {
-  return <Stack />;
+import { HapticTab } from "@shared/components/haptic-tab";
+import { IconSymbol } from "@shared/components/ui/icon-symbol";
+import { Colors } from "@shared/constants/theme";
+import { useColorScheme } from "@shared/hooks/use-color-scheme.web";
+
+export default function TabLayout() {
+  const colorScheme = useColorScheme();
+
+  return (
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        headerShown: true,
+        tabBarButton: HapticTab,
+      }}
+    >
+      <Tabs.Screen
+        name="(tabs)/index"
+        options={{
+          title: "Home",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="house.fill" color={color} />
+          ),
+        }}
+      />
+    </Tabs>
+  );
 }
