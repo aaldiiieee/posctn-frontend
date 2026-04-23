@@ -1,31 +1,13 @@
-import { Tabs } from "expo-router";
-import React from "react";
+import AuthProvider from "@shared/context/AuthContext";
+import { Stack } from "expo-router";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-import { HapticTab } from "@shared/components/haptic-tab";
-import { IconSymbol } from "@shared/components/ui/icon-symbol";
-import { Colors } from "@shared/constants/theme";
-import { useColorScheme } from "@shared/hooks/use-color-scheme.web";
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function RootLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-        headerShown: true,
-        tabBarButton: HapticTab,
-      }}
-    >
-      <Tabs.Screen
-        name="(tabs)/index"
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <AuthProvider>
+        <Stack screenOptions={{ headerShown: false }} />
+      </AuthProvider>
+    </GestureHandlerRootView>
   );
 }
