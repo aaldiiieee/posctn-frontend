@@ -5,25 +5,31 @@
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+/** Tint Color Light */
+const TINT_COLOR_LIGHT = '#0a7ea4';
+/** Tint Color Dark */
+const TINT_COLOR_DARK = '#fff';
+/** Tab Icon Color Light */
+const TAB_ICON_DEFAULT_LIGHT = '#687076';
+/** Tab Icon Color Dark */
+const TAB_ICON_DEFAULT_DARK = '#9BA1A6';
 
 export const Colors = {
   light: {
     text: '#11181C',
     background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    tint: TINT_COLOR_LIGHT,
+    icon: TAB_ICON_DEFAULT_LIGHT,
+    tabIconDefault: TAB_ICON_DEFAULT_LIGHT,
+    tabIconSelected: TINT_COLOR_LIGHT,
   },
   dark: {
     text: '#ECEDEE',
     background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    tint: TINT_COLOR_DARK,
+    icon: TAB_ICON_DEFAULT_DARK,
+    tabIconDefault: TAB_ICON_DEFAULT_DARK,
+    tabIconSelected: TINT_COLOR_DARK,
   },
 };
 
@@ -51,3 +57,56 @@ export const Fonts = Platform.select({
     mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
 });
+
+export const Sizes = {
+  /** Base size for padding and margin */
+  base: 8,
+  /** Font size for body text */
+  font: 16,
+  /** Border radius for buttons and cards */
+  radius: 12,
+};
+
+export const Shadows = {
+  /** Shadow for iOS */
+  shadowLight: {
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  /** Shadow for Android */
+  shadowDark: {
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+  },
+};
+
+/**
+ * Standard font sizes for the app.
+ * You can use these font sizes in your styles like this:
+ *
+ * @example
+ * style={{ fontSize: FontSizes.md }}
+ */
+export const FontSizes = {
+  /** 11px — small label, caption, error message */
+  xs: 11,
+  /** 12px — label form, hint text, badge */
+  sm: 12,
+  /** 14px — body text secondary, subtitle */
+  md: 14,
+  /** 16px — body text primary (default) */
+  lg: 16,
+  /** 18px — subheading, card title */
+  xl: 18,
+  /** 22px — heading page */
+  '2xl': 22,
+  /** 28px — heading large / hero text */
+  '3xl': 28,
+  /** 34px — display text */
+  '4xl': 34,
+} as const;

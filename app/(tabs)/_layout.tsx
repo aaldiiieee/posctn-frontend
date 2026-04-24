@@ -1,8 +1,8 @@
-import { HapticTab } from "@shared/components/haptic-tab";
-import { IconSymbol } from "@shared/components/ui/icon-symbol";
+import { HapticTab } from "@shared/components/HapticTab";
+import { IconSymbol } from "@shared/components/ui/IconSymbol";
 import { Colors } from "@shared/constants/themeConstants";
 import { useAuth } from "@shared/context/AuthContext";
-import { useColorScheme } from "@shared/hooks/use-color-scheme.web";
+import { useColorScheme } from "@shared/hooks/useColorScheme";
 import { Redirect, Tabs } from "expo-router";
 import React from "react";
 

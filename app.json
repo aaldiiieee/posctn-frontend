@@ -44,6 +44,11 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "apiBaseUrl": "",
+      "appEnv": "development",
+      "version": "1.0.0"
     }
   }
 }

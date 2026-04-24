@@ -1,9 +1,3 @@
-import { Text, View } from "react-native";
+import LoginScreen from "@features/auth/screens/LoginScreen";
 
-export default function Login() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Login</Text>
-    </View>
-  );
-}
+export default LoginScreen;
