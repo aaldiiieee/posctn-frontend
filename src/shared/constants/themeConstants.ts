@@ -5,79 +5,57 @@
 
 import { Platform } from "react-native";
 
-const TAB_ICON_DEFAULT_LIGHT = "#687076";
-const TAB_ICON_DEFAULT_DARK = "#9BA1A6";
+const TAB_ICON_DEFAULT = "#687076";
 
-const BACKGROUND_COLOR_LIGHT_PRIMARY = "#fff";
-const BACKGROUND_COLOR_LIGHT_SECONDARY = "#F5F5F5";
-const BACKGROUND_COLOR_DARK_PRIMARY = "#151718";
-const BACKGROUND_COLOR_DARK_SECONDARY = "#2A2C2D";
-
-const BUTTON_PRIMARY_LIGHT = "#006684";
-const BUTTON_PRIMARY_DARK = "#004D64";
-const BUTTON_SECONDARY_LIGHT = "#E0E0E0";
-const BUTTON_SECONDARY_DARK = "#3F484D";
+const BACKGROUND_COLOR_PRIMARY = "#FFF8F5";
+const BACKGROUND_COLOR_SECONDARY = "#F5F5F5";
+const BACKGROUND_HEADER_COLOR_PRIMARY = "#FFEDD5";
+const BACKGROUND_CARD_PRIMARY = "#FFFFFF";
+const BUTTON_PRIMARY = "#A43537";
+const BUTTON_SECONDARY = "#F9E6D1";
 const BUTTON_DANGER = "#db2326";
-
-const LABEL_INPUT_COLOR_PRIMARY_LIGHT = "#11181C";
-const LABEL_INPUT_COLOR_SECONDARY_LIGHT = "#004D64";
-const LABEL_INPUT_COLOR_PRIMARY_DARK = "#ECEDEE";
-const LABEL_INPUT_COLOR_SECONDARY_DARK = "#004D64";
-
-const TEXT_COLOR_PRIMARY_LIGHT = "#11181C";
-const TEXT_COLOR_SECONDARY_LIGHT = "#004D64";
-const TEXT_COLOR_PRIMARY_DARK = "#ECEDEE";
+const LABEL_INPUT_COLOR_PRIMARY = "#574140";
+const LABEL_INPUT_COLOR_SECONDARY = "#1E1B18";
+const TEXT_COLOR_PRIMARY = "#574140";
+const TEXT_COLOR_SECONDARY = "#1E1B18";
+const TEXT_INPUT_COLOR_PRIMARY = "#FFF8F5";
+const BORDER_COLOR_PRIMARY = "#EFDDC8";
 
 export const Colors = {
-  light: {
-    text: {
-      primary: TEXT_COLOR_PRIMARY_LIGHT,
-      secondary: TEXT_COLOR_SECONDARY_LIGHT,
-    },
-    background: {
-      primary: BACKGROUND_COLOR_LIGHT_PRIMARY,
-      secondary: BACKGROUND_COLOR_LIGHT_SECONDARY,
-    },
-    button: {
-      primary: BUTTON_PRIMARY_LIGHT,
-      secondary: BUTTON_SECONDARY_LIGHT,
-      danger: BUTTON_DANGER,
-      textPrimary: "#FFFFFF",
-      textSecondary: "#11181C",
-    },
-    label: {
-      primary: LABEL_INPUT_COLOR_PRIMARY_LIGHT,
-      secondary: LABEL_INPUT_COLOR_SECONDARY_LIGHT,
-    },
-    tabIcon: {
-      default: TAB_ICON_DEFAULT_LIGHT,
-      active: BUTTON_PRIMARY_LIGHT,
-    },
+  text: {
+    primary: TEXT_COLOR_PRIMARY,
+    secondary: TEXT_COLOR_SECONDARY,
   },
-
-  dark: {
-    text: {
-      primary: TEXT_COLOR_PRIMARY_DARK,
-    },
-    background: {
-      primary: BACKGROUND_COLOR_DARK_PRIMARY,
-      secondary: BACKGROUND_COLOR_DARK_SECONDARY,
-    },
-    button: {
-      primary: BUTTON_PRIMARY_DARK,
-      secondary: BUTTON_SECONDARY_DARK,
-      danger: BUTTON_DANGER,
-      textPrimary: "#FFFFFF",
-      textSecondary: "#ECEDEE",
-    },
-    label: {
-      primary: LABEL_INPUT_COLOR_PRIMARY_DARK,
-      secondary: LABEL_INPUT_COLOR_SECONDARY_DARK,
-    },
-    tabIcon: {
-      default: TAB_ICON_DEFAULT_DARK,
-      active: BUTTON_PRIMARY_DARK,
-    },
+  background: {
+    primary: BACKGROUND_COLOR_PRIMARY,
+    secondary: BACKGROUND_COLOR_SECONDARY,
+  },
+  card: {
+    primary: BACKGROUND_CARD_PRIMARY,
+  },
+  border: {
+    primary: BORDER_COLOR_PRIMARY,
+  },
+  header: {
+    primary: BACKGROUND_HEADER_COLOR_PRIMARY,
+  },
+  button: {
+    primary: BUTTON_PRIMARY,
+    secondary: BUTTON_SECONDARY,
+    danger: BUTTON_DANGER,
+    textPrimary: "#FFFFFF",
+    textSecondary: "#11181C",
+  },
+  label: {
+    primary: LABEL_INPUT_COLOR_PRIMARY,
+    secondary: LABEL_INPUT_COLOR_SECONDARY,
+  },
+  textInput: {
+    primary: TEXT_INPUT_COLOR_PRIMARY,
+  },
+  tabIcon: {
+    default: TAB_ICON_DEFAULT,
+    active: BUTTON_PRIMARY,
   },
 };
 

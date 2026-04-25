@@ -20,6 +20,9 @@ const MAPPING = {
   'chevron.right': 'chevron-right',
   'eye': 'visibility',
   'eye.slash': 'visibility-off',
+  'person.2.fill': 'groups',
+  'person.3.fill': 'groups',
+  'person.fill': 'person',
 } as IconMapping;
 
 /**

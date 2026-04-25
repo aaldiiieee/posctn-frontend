@@ -9,7 +9,7 @@ import {
 interface ButtonProps extends TouchableOpacityProps {
   text: string;
   variant?: "primary" | "secondary" | "danger";
-  onPress: () => void;
+  onPress?: () => void;
 }
 
 export default function Button({
@@ -21,7 +21,7 @@ export default function Button({
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={[styles.button, { backgroundColor: Colors.light.button[variant] }]}
+      style={[styles.button, { backgroundColor: Colors.button[variant] }]}
       {...props}
     >
       <Text style={styles.buttonText}>{text}</Text>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   buttonText: {
-    color: Colors.light.button.textPrimary,
+    color: Colors.button.textPrimary,
     fontSize: 18,
     fontWeight: "bold",
   },

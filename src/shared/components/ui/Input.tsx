@@ -33,11 +33,11 @@ export function Input({
 
   return (
     <View style={styles.container}>
-      {label && <Text style={[styles.label, { color: Colors.light.label[labelVariant] }]}>{label}</Text>}
+      {label && <Text style={[styles.label, { color: Colors.label[labelVariant] }]}>{label}</Text>}
 
       <View style={styles.inputWrapper}>
         <TextInput
-          style={[styles.input, error ? styles.inputError : null, style]}
+          style={[styles.input, error ? styles.inputError : null, style, { backgroundColor: Colors.textInput.primary }]}
           secureTextEntry={isPassword ? isHidden : false}
           placeholderTextColor="#999"
           {...props}
@@ -47,9 +47,9 @@ export function Input({
           <TouchableOpacity onPress={togglePassword}>
             <Text style={styles.toggle}>
               {isHidden ? (
-                <IconSymbol name="eye" size={16} color="#004D64" />
+                <IconSymbol name="eye" size={16} color="#8A7170" />
               ) : (
-                <IconSymbol name="eye.slash" size={16} color="#004D64" />
+                <IconSymbol name="eye.slash" size={16} color="#8A7170" />
               )}
             </Text>
           </TouchableOpacity>
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#8A7170",
     borderRadius: 8,
     paddingHorizontal: 12,
   },
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   toggle: {
     marginLeft: 8,
-    color: "#007AFF",
+    color: "#8A7170",
     fontSize: 12,
   },
   error: {

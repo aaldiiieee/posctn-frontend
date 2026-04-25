@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: FontSizes['4xl'],
     fontWeight: "800",
-    color: Colors.light.text.secondary,
+    color: Colors.text.secondary,
   },
   subtitle: {
     fontSize: FontSizes.lg,
