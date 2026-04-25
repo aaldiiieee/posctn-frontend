@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { FontSizes } from "@shared/constants/themeConstants";
+import { Colors, FontSizes } from "@shared/constants/themeConstants";
 
 export default function AuthHeader({
   title,
@@ -26,11 +26,12 @@ const styles = StyleSheet.create({
   headerWrapper: {
     justifyContent: "center",
     maxWidth: 300,
-    gap: 8, 
+    gap: 10, 
   },
   title: {
-    fontSize: FontSizes['3xl'],
-    fontWeight: "bold",
+    fontSize: FontSizes['4xl'],
+    fontWeight: "800",
+    color: Colors.light.text.secondary,
   },
   subtitle: {
     fontSize: FontSizes.lg,

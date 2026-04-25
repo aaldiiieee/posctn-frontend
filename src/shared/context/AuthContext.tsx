@@ -1,3 +1,4 @@
+import { authApi } from "@features/auth/api/authApi";
 import { tokenStorage } from "@shared/lib/tokenStorage";
 import { AuthContextValue, AuthUser } from "@shared/types/auth.types";
 import { createContext, useContext, useEffect, useState } from "react";
@@ -18,10 +19,14 @@ export default function AuthProvider({
       try {
         const token = await tokenStorage.get();
         if (token) {
-          // TODO: Fetch user data from API using the token and set the user state
+          const userData = await authApi.getCurrentUser()
+          setUser(userData);
+          setIsAuthenticated(true);
         }
       } catch (error) {
-        console.log("Failed to hydrate auth state:", error);
+        await tokenStorage.clear();
+        setUser(null);
+        setIsAuthenticated(false);
       }
     }
 
@@ -69,10 +74,10 @@ export default function AuthProvider({
   );
 }
 
-export function useAuth() {
+export function useAuthContext() {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
+    throw new Error("useAuthContext must be used within an AuthProvider");
   }
   return context;
 }

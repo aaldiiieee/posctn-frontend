@@ -2,12 +2,14 @@
  * Basic user data used in authentication.
  */
 export interface AuthUser {
-  /** Unique user id */
-  id: string;
+  /** User id */
+  id: number;
   /** User full name */
   name: string;
-  /** User email address */
-  email: string;
+  /** User full name */
+  fullname: string;
+  /** User role */
+  role: string;
 }
 
 /**
